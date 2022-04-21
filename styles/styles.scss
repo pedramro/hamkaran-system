@@ -3,6 +3,7 @@
 
 html {
     overflow-x: hidden;
+    user-select: none;
 }
 
 nav {
@@ -14,7 +15,9 @@ nav {
         @include forNav {
             position: static;
         }
-        
+        & .img-wrapper {
+            cursor: pointer;
+        }
         & .nav-ul {
             list-style: none;
             display: flex;
@@ -28,6 +31,10 @@ nav {
                 right: 0;
                 z-index: 5;
                 background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity));
+            }
+            @include forNavUp {
+                min-height: 28px;
+                top: 10px;
             }
             @include tablet {
                 display: none;
@@ -641,7 +648,7 @@ footer {
     top: 0;
     background-color: rgb(232, 232, 232);
     @include forNavUp {
-        top: 40px;
+        top: 45px;
     }
     @include forNav {
         top: 98px;

@@ -1,5 +1,9 @@
 html {
   overflow-x: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 nav {
@@ -22,6 +26,10 @@ nav #nav-container {
   }
 }
 
+nav #nav-container .img-wrapper {
+  cursor: pointer;
+}
+
 nav #nav-container .nav-ul {
   list-style: none;
   display: -webkit-box;
@@ -40,6 +48,13 @@ nav #nav-container .nav-ul {
     right: 0;
     z-index: 5;
     background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  nav #nav-container .nav-ul {
+    min-height: 28px;
+    top: 10px;
   }
 }
 
@@ -950,7 +965,7 @@ footer .copyright-section .divider-wrapper p {
 
 @media screen and (min-width: 1024px) {
   .on {
-    top: 40px;
+    top: 45px;
   }
 }
 
