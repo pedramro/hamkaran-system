@@ -631,11 +631,21 @@ footer {
 
 }
 
+.template {
+    display: none;
+}
 .on {
+    display: block;
     position: absolute;
     z-index: 5;
     top: 0;
     background-color: rgb(232, 232, 232);
+    @include forNavUp {
+        top: 40px;
+    }
+    @include forNav {
+        top: 98px;
+    }
     & ul {
         list-style: none;
         padding: 15px;

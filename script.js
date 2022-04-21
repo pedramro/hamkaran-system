@@ -46,7 +46,6 @@ function navTitleMouseOver(event) {
     template.addEventListener('mouseleave', templateOff)
     template.classList.add('on')
     template.style.left = `${event.clientX - 165}px`
-    template.style.top = `${event.clientY + 10}px`
 }
 
 const navTitleMouseLeave = () => template.classList.remove('on')

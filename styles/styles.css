@@ -936,11 +936,28 @@ footer .copyright-section .divider-wrapper p {
   }
 }
 
+.template {
+  display: none;
+}
+
 .on {
+  display: block;
   position: absolute;
   z-index: 5;
   top: 0;
   background-color: #e8e8e8;
+}
+
+@media screen and (min-width: 1024px) {
+  .on {
+    top: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .on {
+    top: 98px;
+  }
 }
 
 .on ul {
